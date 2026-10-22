@@ -65,7 +65,7 @@ skills/          навыки с конвенциями по языкам
 | Навык | Файл | Когда применять |
 |---|---|---|
 | `go-conventions` | `skills/go-conventions/SKILL.md` | Go-код: `go.mod`, `*.go`, `*_test.go`. |
-| `kotlin-conventions` | `skills/kotlin-conventions/SKILL.md` | Kotlin/Android: `build.gradle.kts`, `*.kt`. |
+| `kotlin-conventions` | `skills/kotlin-conventions/SKILL.md` | Kotlin/Android/Spring Boot: `build.gradle.kts`, `*.kt`, `application.yml`. |
 | `python-conventions` | `skills/python-conventions/SKILL.md` | Python: `pyproject.toml`, `*.py`, `test_*.py`. |
 
 Кратко по содержанию:
@@ -75,6 +75,10 @@ skills/          навыки с конвенциями по языкам
   `errgroup`, `slog`, table-driven тесты.
 - **Kotlin** — только `./gradlew`; `val` вместо `var`, запрет `!!`, structured
   concurrency и внедряемые диспетчеры, Compose + `StateFlow`, detekt/ktlint.
+- **Spring Boot** — constructor injection, `@ConfigurationProperties` вместо
+  `@Value`, `@Transactional` на сервисах, DTO на границе и `ProblemDetail`,
+  slice-тесты (`@WebMvcTest`, `@DataJpaTest`) и Testcontainers, Flyway/Liquibase
+  для схемы, секреты только из env.
 - **Python** — `uv`/`poetry`/pytest/ruff/mypy; type hints, без mutable default
   аргументов, `pathlib`, `logging`, `asyncio.to_thread` вместо блокирующего I/O.
 
